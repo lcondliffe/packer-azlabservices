@@ -7,3 +7,6 @@
 
 # Terraform variable files
 *.tfvars
+
+#Terraform lock files
+.terraform.lock.hcl
