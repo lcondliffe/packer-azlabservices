@@ -28,7 +28,7 @@ resource "azurerm_shared_image_gallery" "pkr_image_gallery" {
   }
 }
 
-resource "azurerm_shared_image" "example" {
+resource "azurerm_shared_image" "pkr-lab-win2019" {
   name                = "pkr-lab-win2019"
   gallery_name        = azurerm_shared_image_gallery.pkr_image_gallery.name
   resource_group_name = azurerm_resource_group.pkr_image_gallery.name
