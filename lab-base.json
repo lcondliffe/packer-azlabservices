@@ -44,9 +44,14 @@
     ],
     "provisioners": [
         {
+            "type": "powershell",
+            "script": "./ConfigureRemotingForAnsible.ps1"
+        },
+
+        {
             "type": "ansible",
             "playbook_file": "./playbook.yml",
-            "user": "packer",
+            "user": "Administrator",
             "use_proxy": false,
             "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore"]
         },
