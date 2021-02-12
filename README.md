@@ -35,5 +35,7 @@ Build image with Packer:
 
 ### Sources
 https://www.packer.io/docs/provisioners/ansible
+
 https://github.com/hashicorp/packer/issues/7809#issuecomment-546985800
+
 https://www.packer.io/docs/builders/azure#authentication-for-azure
