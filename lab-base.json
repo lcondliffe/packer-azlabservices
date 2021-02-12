@@ -2,7 +2,7 @@
     "variables": {
         "azure_region": "uksouth",
         "resource_group_name": "ITS-Test-galleryRg",
-        "image_gallery_name": "",
+        "image_gallery_name": "ITS_Test_Lab_Images",
         "image_name": "pkr-lab-win2019",
         "vm_size": "Standard_DS2_v2"
     },
@@ -51,9 +51,11 @@
         {
             "type": "ansible",
             "playbook_file": "./playbook.yml",
-            "user": "Administrator",
+            "user": "packer",
             "use_proxy": false,
-            "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore"]
+            "ansible_env_vars": [ "WINRM_PASSWORD={{.WinRMPassword}}" ],
+            "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore"],
+            "keep_inventory_file": true
         },
 
         {
