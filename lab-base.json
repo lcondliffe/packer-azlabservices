@@ -3,8 +3,6 @@
         "azure_region": "uksouth",
         "resource_group_name": "pkr_image_gallery",
         "image_gallery_name": "pkr_image_gallery",
-        "image_name": "pkr-lab-win2019",
-        "image_version": "vanilla",
         "vm_size": "Standard_DS2_v2"
     },
     "builders": [
