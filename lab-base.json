@@ -44,6 +44,14 @@
     ],
     "provisioners": [
         {
+            "type": "ansible",
+            "playbook_file": "./playbook.yml",
+            "user": "packer",
+            "use_proxy": false,
+            "extra_arguments": ["-e", "ansible_winrm_server_cert_validation=ignore"]
+        },
+
+        {
             "type": "powershell",
             "inline": [
                 "if( Test-Path $Env:SystemRoot\\windows\\system32\\Sysprep\\unattend.xml ){ rm $Env:SystemRoot\\windows\\system32\\Sysprep\\unattend.xml -Force}",
