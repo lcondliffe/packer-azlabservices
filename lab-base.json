@@ -35,6 +35,7 @@
             },
 
             "shared_image_gallery_destination": {
+                "subscription": "{{user `azure_subscription_id`}}",
                 "resource_group": "{{user `resource_group_name`}}",
                 "gallery_name": "{{user `image_gallery_name`}}",
                 "image_name": "{{user `image_name`}}",

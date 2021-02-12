@@ -10,3 +10,6 @@
 
 #Terraform lock files
 .terraform.lock.hcl
+
+#My vars file
+vars.json
